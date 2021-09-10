@@ -1,0 +1,5 @@
+.sessionMessages .brd-message-box {
+  max-width: 65%; }
+  .sessionMessages .brd-message-box button {
+    white-space: unset !important;
+    word-break: break-all; }

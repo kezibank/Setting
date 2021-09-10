@@ -1,0 +1,18 @@
+.sessionManagement .brd-bring-front {
+  z-index: 2 !important; }
+
+.sessionManagement .brd-session-box.active {
+  background-color: var(--bs-light) !important; }
+
+.sessionManagement .brd-session-box p {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  word-break: break-all; }
+
+.sessionManagement .nav-tabs[role="tablist"] .active .brd-badge {
+  background-color: var(--bs-white) !important; }
+
+.sessionManagement .nav-tabs[role="tablist"] button.active p {
+  color: #fff !important; }

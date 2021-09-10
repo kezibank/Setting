@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--common style-->
+	<link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!--component style-->
+  <link rel="stylesheet" href="/assets/css/ozooNavbar.css">
+	<link rel="stylesheet" href="/assets/css/sessionManagement.css">
+  <link rel="stylesheet" href="/assets/css/sessionMessages.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <div class="ozooLayoutDefault d-flex vh-100 bg-secondary p-3">
+    <div class="h-100 p-3 me-3">
+      <nav class="ozooNavbar">
+        <ul class="m-0 p-0 list-unstyled">
+          <!--aktif sayfanın a tag ine verilecek class: active-->
+          <li class="mb-5">
+            <a href="#" class="d-flex text-secondary-light text-decoration-none flex-column text-center">
+              <i class="fas fa-2x fa-comments mb-2"></i>
+              Chat
+            </a>
+          </li>
+          <li class="mb-5">
+            <a href="#" class="active d-flex text-secondary-light text-decoration-none flex-column text-center">
+              <i class="fas fa-2x fa-ticket-alt mb-2"></i>
+              Ticket
+            </a>
+          </li>
+          <li class="mb-5">
+            <a href="#" class="d-flex text-secondary-light text-decoration-none flex-column text-center">
+              <i class="fas fa-2x fa-cog mb-2"></i>
+              Settings
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="h-100 d-flex flex-column brd-rounded bg-brd-light flex-fill p-3">
+      <div class="rounded bg-white d-flex p-3 mb-3">
+        <img src="/assets/images/logo.png" alt="logo"/>
+        <ul class="list-unstyled d-flex ms-auto m-0 p-0">
+          <li class="brd-border-start d-flex position-relative align-items-center ps-4">
+            <div class="d-flex">
+              <img width="45" height="45" src="/assets/images/avatar.png" alt="avatar" class="rounded-circle me-2"/>
+              <div class="pe-5">
+                <h6 class="fw-bold mb-1">John Porter</h6>
+                <p class="small text-muted mb-0">AGENT</p>
+              </div>
+            </div>
+          </li>
+          <li class="brd-border-start d-flex position-relative align-items-center ps-4">
+            <div class="dropdown">
+              <button class="btn brd-hide-caret position-relative btn-transparent border rounded dropdown-toggle pe-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-sort text-muted position-absolute end-0 top-50 translate-middle-y me-2"></i>
+                <img width="25px" height="17px" src="/assets/images/english.png" alt="eng" class="me-2" />
+                English
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <img width="25px" height="17px" src="/assets/images/turkish.png" alt="tur" class="me-2" />
+                    Turkish
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container-fluid flex-fill">
+        <div class="row h-100">
+          <div class="sessionManagement col-lg-3 d-flex flex-column bg-white rounded h-100 p-3">
+            
+            <div class="d-flex mb-3">
+              <div class="d-flex flex-fill align-items-center bg-brd-gray-2 border-0 rounded-3 position-relative">
+                <span class="position-absolute start-0 ps-3"><i class="far fa-search text-muted"></i></span>
+                <input type="text" class="form-control form-control-sm bg-transparent brd-placeholder py-2 ps-5 rounded-2 border-0" name="keyword" placeholder="Oturumlarda ara...">
+              </div>
+            </div>
+    
+            <div role="tablist" class="nav nav-tabs row m-0 border border-brd-secondary-lighter bg-white rounded-3 mb-3">
+              <button class="col-3 btn btn-outline-primary px-0 border-0 border-end shadow-none active p-0" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">
+                <div class="d-flex flex-column align-items-center justify-content-center p-2">
+                  <span class="bg-light rounded text-dark w-100 d-flex align-items-center justify-content-center fs-6 mb-3">
+                    12
+                  </span>
+                  <p class="text-center text-dark mb-0 brd-fs-9 fw-bold">
+                      Queue
+                  </p>
+                </div>
+              </button>
+              <button class="col-3 btn btn-outline-primary border-0 px-0 border-end border-brd-secondary-lighter shadow-none p-0" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">
+                <div class="d-flex flex-column align-items-center justify-content-center p-2">
+                  <span class="bg-light rounded text-dark w-100 d-flex align-items-center justify-content-center fs-6 mb-3">
+                    12
+                  </span>
+                  <p class="text-center text-dark mb-0 brd-fs-9 fw-bold">
+                    Active
+                  </p>
+                </div>
+              </button>
+              <button class="col-3 btn btn-outline-primary border-0 border-end shadow-none p-0" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">
+                <div class="d-flex flex-column align-items-center justify-content-center p-2">
+                  <span class="bg-light rounded text-dark w-100 d-flex align-items-center justify-content-center fs-6 mb-3">
+                    12
+                  </span>
+                  <p class="text-center text-dark mb-0 brd-fs-9 fw-bold">
+                      Completed
+                  </p>
+                </div>
+              </button>
+              <button class="col-3 btn btn-outline-primary px-0 border-0 shadow-none p-0" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">
+                <div class="d-flex flex-column align-items-center justify-content-center p-2">
+                  <span class="bg-light rounded text-dark w-100 d-flex align-items-center justify-content-center fs-6 mb-3">
+                    12
+                  </span>
+                  <p class="text-center text-dark mb-0 brd-fs-9 fw-bold">
+                      All
+                  </p>
+                </div>
+              </button>
+            </div>
+    
+            <div class="flex-fill position-relative">
+
+              <div class=" brd-hide-scrollbar overflow-auto position-absolute start-0 top-0 h-100">
+                <div class="bg-brd-gray rounded py-2 px-3">
+                  <i class="fas fa-thumbtack text-muted me-2"></i>
+                  <span class="small text-muted fw-bold">Pinli Oturumlar</span>
+                </div>
+        
+                <div class="brd-session-box d-inline-flex w-100">
+                    <div class="position-relative align-self-start pt-4">
+                      <span class="position-absolute bg-success border border-2 mt-n1 me-n1 p-1 border-white rounded-circle translate-middle-x end-0"></span>
+                      <img width="40" height="40" src="./../../assets/images/avatar.png" class="rounded-circle">
+                    </div>
+                    <div class="p-2 p-3 flex-fill">
+                      <span class="text-dark fs-6 brd-fw-bold mb-0">Aleyna Peker</span>
+                      <span class="text-muted brd-fs-9 float-end mt-2">4:11 PM</span>
+                      
+                      <p class="text-muted small mb-1">Yardımlarınız için teşekkürler…</p>
+                      <div class="d-inline-flex flex-wrap w-100">
+                        <div class="d-inline-flex align-items-center me-3">
+                          <i class="fab fa-instagram me-1"></i>
+                          <span class="text-muted brd-fs-9 d-flex align-items-center">/aleynapeker</span>
+                        </div>
+                        <div class="d-inline-flex align-items-center">
+                          <i class="fas fa-user-alt me-1"></i>
+                          <span class="text-muted brd-fs-9 d-flex align-items-center">Ercan Balcı</span>
+                        </div>
+                        <div class="dropdown ms-auto">
+                          <button class="brd-messagedetail-toggle btn btn-transparent dropdown-toggle brd-hide-caret shadow-none p-0" id="brdDropdownMessage0"  data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-chevron-down text-muted "></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-1" aria-labelledby="brdDropdownMessage0">
+                            <li><a class="dropdown-item py-2" href="#">Konuşmayı Pinle</a></li>
+                            <li><a class="dropdown-item py-2" href="#">Başka Agent’a Yönlendir</a></li>
+                            <li><a class="dropdown-item py-2" href="#">Sonlandır</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+        
+                <div class="bg-brd-gray rounded py-2 px-3">
+                  <i class="fas fa-thumbtack text-muted me-2"></i>
+                  <span class="small text-muted fw-bold">Aktif Oturumlar</span>
+                </div>
+        
+                <!--aktif sessiona eklenecek class:active-->
+                <div class="brd-session-box active border-bottom d-inline-flex w-100 px-2 mb-3">
+                  <div class="position-relative align-self-start pt-4">
+                    <span class="position-absolute bg-success border border-2 mt-n1 me-n1 p-1 border-white rounded-circle translate-middle-x end-0"></span>
+                    <img width="40" height="40" src="./../../assets/images/avatar.png" class="rounded-circle">
+                  </div>
+                  <div class="p-2 p-3 flex-fill">
+                    <span class="text-dark fs-6 brd-fw-bold mb-0">Aleyna Peker</span>
+                    <span class="text-muted brd-fs-9 float-end mt-2">4:11 PM</span>
+                    
+                    <p class="text-muted small mb-1">Yardımlarınız için teşekkürler…</p>
+                    <div class="d-inline-flex flex-wrap w-100">
+                      <div class="d-inline-flex align-items-center me-3">
+                        <i class="fab fa-instagram me-1"></i>
+                        <span class="text-muted brd-fs-9 d-flex align-items-center">/aleynapeker</span>
+                      </div>
+                      <div class="d-inline-flex align-items-center">
+                        <i class="fas fa-user-alt me-1"></i>
+                        <span class="text-muted brd-fs-9 d-flex align-items-center">Ercan Balcı</span>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        
+              <div class="brd-session-box border-bottom d-inline-flex w-100 px-2 mb-3">
+                <div class="position-relative align-self-start pt-4">
+                  <span class="position-absolute bg-success border border-2 mt-n1 me-n1 p-1 border-white rounded-circle translate-middle-x end-0"></span>
+                  <img width="40" height="40" src="./../../assets/images/avatar.png" class="rounded-circle">
+                </div>
+                <div class="p-2 p-3 flex-fill">
+                  <span class="text-dark fs-6 brd-fw-bold mb-0">Aleyna Peker</span>
+                  <span class="text-muted brd-fs-9 float-end mt-2">4:11 PM</span>
+                  
+                  <p class="text-muted small mb-1">Yardımlarınız için teşekkürler…</p>
+                  <div class="d-inline-flex flex-wrap w-100">
+                    <div class="d-inline-flex align-items-center me-3">
+                      <i class="fab fa-instagram me-1"></i>
+                      <span class="text-muted brd-fs-9 d-flex align-items-center">/aleynapeker</span>
+                    </div>
+                    <div class="d-inline-flex align-items-center">
+                      <i class="fas fa-user-alt me-1"></i>
+                      <span class="text-muted brd-fs-9 d-flex align-items-center">Ercan Balcı</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+              </div>
+
+              
+            </div>
+            
+
+          </div>
+          <div class="sessionMessages col-lg-6 h-100">
+            <div  class="d-flex flex-column h-100">
+
+            <div class="bg-white rounded shadow-sm d-flex align-items-center justify-content-between px-3 py-2">
+              <div class="d-flex align-items-center">
+                <div class="position-relative">
+                  <span class="position-absolute border border-2 mt-n1 me-n1 p-1 border-white bg-success rounded-circle translate-middle-x end-0"></span>
+                  <img width="40" height="40" src="./../../assets/images/avatar.png" class="rounded-circle">
+                </div>
+                <div class="ps-3">
+                  <p class="text-dark fs-6 brd-fw-bold mb-0">Aleyna Peker</p>
+                  <div class="d-inline-flex align-items-center me-3">
+                    <i class="fab fa-instagram me-1"></i>
+                    <span class="text-muted brd-fs-9 d-flex align-items-center">/aleynapeker</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-transparent p-0 ms-4" id="brdDropdownSessionMessage"  data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="far text-muted fs-4 fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end border-0 shadow mt-2 ms-4" aria-labelledby="brdDropdownSessionMessage">
+                  <li><a class="dropdown-item py-2" href="#">Konuşmayı Pinle</a></li>
+                  <li><a class="dropdown-item py-2" href="#">Başka Agent’a Yönlendir</a></li>
+                  <li><a class="dropdown-item py-2" href="#">Sonlandır</a></li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="d-flex flex-column flex-fill overflow-auto pt-3 px-1">
+              
+              <!--sol mesaj kutusu-->
+              <div class="brd-message-box d-flex position-relative mb-1">
+                <button class="btn btn-transparent brd-hide-caret dropdown-toggle bg-white position-relative rounded-3 py-2 px-3 pe-5" id="brdDropdownMessageMessageDetail0" aria-expanded="false" data-bs-toggle="dropdown">
+                  <span class="btn btn-transparent shadow-none position-absolute end-0 top-0 brd-fs-7 mt-2 me-2 p-0">
+                    <i class="far fa-chevron-down"></i>
+                  </span>
+                  <p class="text-brd-secondary-regular fs-brd-8 fw-brd-bold text-start mb-0">Ece Hasoğlu</p>
+                  <p class="text-dark text-start small fw-brd-bold mb-0">
+                    Merhaba
+                  </p>
+                  <time class="position-absolute end-0 bottom-0 text-muted brd-fs-9 fw-brd-bold mx-1 my-1">14:00</time>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end border-0 shadow mt-1" aria-labelledby="brdDropdownMessageMessageDetail0">
+                  <li><a class="dropdown-item py-2" href="#">Mesajı Seç</a></li>
+                  <li><a class="dropdown-item py-2" href="#">Etiket Ekle</a></li>
+                  <li><a class="dropdown-item py-2" href="#">İlet</a></li>
+                  <li><a class="dropdown-item py-2" href="#">Raporla</a></li>
+                </ul>
+              </div>
+              <!--sol mesaj kutusu-->
+              <div class="brd-message-box d-flex position-relative mb-1">
+                <button class="btn btn-transparent brd-hide-caret dropdown-toggle bg-white position-relative rounded-3 py-2 px-3 pe-5" id="brdDropdownMessageMessageDetail0" aria-expanded="false" data-bs-toggle="dropdown">
+                  <!--<span class="btn btn-transparent shadow-none position-absolute end-0 top-0 brd-fs-7 mt-2 me-2 p-0">
+                    <i class="far fa-chevron-down"></i>
+                  </span>-->
+                  <!--<p class="text-brd-secondary-regular fs-brd-8 fw-brd-bold text-start mb-0">Ece Hasoğlu</p>-->
+                  <p class="text-dark text-start small fw-brd-bold mb-0">
+                    Merhaba
+                  </p>
+                  <time class="position-absolute end-0 bottom-0 text-muted brd-fs-9 fw-brd-bold mx-1 my-1">14:00</time>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end border-0 shadow mt-1" aria-labelledby="brdDropdownMessageMessageDetail0">
+                  <li><a class="dropdown-item py-2" href="#">Mesajı Seç</a></li>
+                  <li><a class="dropdown-item py-2" href="#">Etiket Ekle</a></li>
+                  <li><a class="dropdown-item py-2" href="#">İlet</a></li>
+                  <li><a class="dropdown-item py-2" href="#">Raporla</a></li>
+                </ul>
+              </div>
+
+              <!--sağ mesaj kutusu-->
+              <div class="brd-message-box align-self-end d-flex position-relative mb-1">
+                <button class="btn btn-transparent brd-hide-caret dropdown-toggle bg-secondary position-relative rounded-3 py-2 px-3 pe-5" id="brdDropdownMessageMessageDetail0" aria-expanded="false" data-bs-toggle="dropdown">
+                  <span class="btn btn-transparent shadow-none position-absolute end-0 top-0 brd-fs-7 mt-2 me-2 p-0">
+                    <i class="far fa-chevron-down text-white"></i>
+                  </span>
+                  <p class="text-white fs-brd-8 fw-brd-bold text-start mb-0">Ece Hasoğlu</p>
+                  <p class="text-white text-start small fw-brd-bold mb-0">
+                    Merhaba
+                  </p>
+                  <time class="position-absolute end-0 bottom-0 text-muted brd-fs-9 fw-brd-bold mx-1 my-1">14:00</time>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end border-0 shadow mt-1" aria-labelledby="brdDropdownMessageMessageDetail0">
+                  <li><a class="dropdown-item py-2" href="#">Mesajı Seç</a></li>
+                  <li><a class="dropdown-item py-2" href="#">Etiket Ekle</a></li>
+                  <li><a class="dropdown-item py-2" href="#">İlet</a></li>
+                  <li><a class="dropdown-item py-2" href="#">Raporla</a></li>
+                </ul>
+              </div>
+  
+      
+      
+            </div>
+      
+            <div class="bg-white rounded shadow-sm">
+      
+              <div class="d-flex justify-content-end flex-wrap position-relative gap-1 p-3">
+                <button class="btn btn-light d-inline-flex align-items-center p-0">
+                  <span class="text-brd-secondary-regular small brd-fw-bold d-flex align-items-center px-2">
+                    Ekle
+                  </span>
+                  <span
+                    class="bg-brd-gray px-2 py-1">
+                    <i class="far fa-plus text-brd-secondary-regular"></i>
+                  </span>
+                </button>
+                <button class="btn btn-outline-brd-gray py-1">
+                  <span class="small text-muted fw-bold">/merhaba</span>
+                </button>
+                <button class="btn btn-outline-brd-gray brd-fw-bold py-1">
+                  <span class="small text-muted fw-bold">/memnuniyet</span>
+                </button>
+                <button class="btn btn-outline-brd-gray py-1">
+                  <span class="small text-muted fw-bold">/sorun</span>
+                </button>
+                <button class="btn btn-outline-brd-gray py-1">
+                  <span class="small text-muted fw-bold">/başarılı</span>
+                </button>
+                <button class="btn btn-outline-brd-gray py-1">
+                  <span class="small text-muted fw-bold">/yardımcı</span>
+                </button>
+                <button class="btn btn-outline-brd-gray py-1">
+                  <span class="small text-muted fw-bold">/görüşürüz</span>
+                </button>
+      
+                <div class="dropup">
+                  <button class="btn btn-dark text-white py-1 px-4" id="brdDropupCannedMessages" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-chevron-up fs-5"></i>
+                  </button>
+                  <div class="dropdown-menu shadow border-0 rounded-3 p-3 mb-1" aria-labelledby="brdDropupCannedMessages">
+                    <p class="small brd-fw-bold text-dark">Diğer Hazır Mesajlar</p>
+                    <ul class=" list-unstyled">
+                      <li class="mb-2">
+                        <button class="btn btn-outline-brd-gray brd-fw-bold py-1">
+                          <span class="small text-brd-secondary-regular">/tabi ki</span>
+                        </button>
+                      </li>
+                      <li class="mb-2">
+                        <button class="btn btn-outline-brd-gray brd-fw-bold py-1">
+                          <span class="small text-brd-secondary-regular">/hatırlatıcı</span>
+                        </button>
+                      </li>
+                      <li class="mb-2">
+                        <button class="btn btn-outline-brd-gray brd-fw-bold py-1">
+                          <span class="small text-brd-secondary-regular">/önemsiz</span>
+                        </button>
+                      </li>
+                      <li class="mb-2">
+                        <button class="btn btn-outline-brd-gray brd-fw-bold py-1">
+                          <span class="small text-brd-secondary-regular">/yolladım</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-brd-secondary-lighter  p-3">
+                <form class="d-flex mb-3">
+                  <span class="d-flex align-items-center bg-white rounded-start border border-end-0 px-3">
+                    <i class="fal fa-laugh fs-5"></i>
+                  </span>
+                  <input class="form-control shadow-none border-0 border-top border-bottom rounded-0 brd-placeholder py-2 ps-0" type="text" placeholder="Mesajınızı yazın..."/>
+                  <button class="btn btn-danger shadow-none rounded-0 rounded-end px-3" type="submit">
+                    <i class="far fa-paper-plane"></i>
+                  </button>
+                </form>
+                <div class="d-flex justify-content-between">
+                  <div class="form-check d-flex align-items-center mb-0">
+                    <input class="form-check-input me-2" id="brdHiddenMessage" type="checkbox" value="" checked>
+                    <label class="form-check-label brd-fs-8" for="brdHiddenMessage">
+                      Mesajı gizli mesaj olarak gönder. (Müşteriye iletilmez)
+                    </label>
+                  </div>
+                  <div class="d-flex gap-1">
+                    <button class="btn btn-outline-light text-dark bg-white d-flex align-items-center justify-content-center position-relative px-4 py-3">
+                      <i class="fas fa-paperclip text-brd-secondary-regular position-absolute"></i>
+                    </button>
+                    <button class="btn btn-outline-light text-dark bg-white d-flex align-items-center justify-content-center position-relative px-4 py-3">
+                      <i class="fas fa-paperclip text-brd-secondary-regular position-absolute"></i>
+                    </button>
+                    <button class="btn btn-outline-light text-dark bg-white d-flex align-items-center justify-content-center position-relative px-4 py-3">
+                      <i class="fas fa-paperclip text-brd-secondary-regular position-absolute"></i>
+                    </button>
+                    <button class="btn btn-outline-light text-dark bg-white d-flex align-items-center justify-content-center position-relative px-4 py-3">
+                      <i class="fas fa-paperclip text-brd-secondary-regular position-absolute"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
+
+          </div>
+          <div class="col-lg-3 d-flex flex-column bg-white rounded h-100 p-3">
+            <img width="130" height="130" src="/assets/images/avatar.png" class="rounded-circle p-1 border border-primary mx-auto" />
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!--bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

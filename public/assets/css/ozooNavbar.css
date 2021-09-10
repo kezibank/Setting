@@ -1,0 +1,4 @@
+.ozooNavbar a.active {
+  color: #fff !important; }
+  .ozooNavbar a.active i {
+    color: var(--bs-primary) !important; }
